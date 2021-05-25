@@ -1,0 +1,34 @@
+<html>
+    <head> 
+        <title>Questionnaire</title>
+    </head>
+    <body>
+        <form action="index.php" name="my form" method="POST">
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" name="firstname"><br>
+
+            Are you:<br>
+            <input type="radio" name="sex" value="male">Male<br>
+            <input type="radio" name="sex" value="female">Female<br>
+
+            I like:<br>
+            <input type="checkbox" name="Apples" value="Apples">Apples<br>
+            <input type="checkbox" name="Oranges" value="Oranges">Oranges<br>
+            <input type="checkbox" name="Bananas" value="Bananas">Bananas<br>
+
+            What is your favourite fruit?<br>
+            <select name="favourite">
+                <option value="Apples" selected="selected">Apples</option>
+                <option value="Oranges">Oranges</option>
+                <option value="Bananas">Bananas</option>
+            </select>
+
+            Comments:<br>
+            <textarea rows="5" cols="30">
+            </textarea><br>
+
+            <input type="submit" value="submit questionnaire"/>
+
+        </form>
+    </body>    
+</html>
