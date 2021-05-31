@@ -22,7 +22,7 @@ var products = [
 		organic: true,
 		dairyFree: true,
 		nutFree: true,
-		price: 10.00
+		price: 10
 	},
 	{
 		name:"Spinach",
@@ -36,14 +36,14 @@ var products = [
 		organic: true,
 		dairyFree: true,
 		nutFree: false,
-		price: 3.00
+		price: 3
 	},
 	{
 		name:"Milk",
 		organic: true,
 		dairyFree: false,
 		nutFree: true,
-		price: 6.00
+		price: 6
 	},
 	{
 		name:"Butter",
@@ -57,7 +57,7 @@ var products = [
 		organic: false,
 		dairyFree: false,
 		nutFree: false,
-		price:6.99
+		price:6.90
 	},
 	{
 		name:"Cashews",
@@ -76,9 +76,16 @@ var products = [
 	{
 		name:"Protein Bar",
 		organic: false,
-		dairyFree: false,
+		dairyFree: true,
 		nutFree: false,
 		price: 1.75
+	},
+	{
+		name:"Dried Mango Slices",
+		organic: false,
+		dairyFree: true,
+		nutFree: true,
+		price: 5.69
 	}
 
 	
@@ -89,58 +96,61 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(dairyFree, prods, nutFree, organic, none) {
+function restrictListProducts(dairyFree, products, nutFree, organic, none) {
 	let product_names = [];
 
-	for (let i=0; i<prods.length; i+=1) {
+	for (let i=0; i<products.length; i+=1) {
 
 
 		//lactose intolerant + nut allergy check
-		if ((dairyFree == true) && (prods[i].dairyFree == true) && (nutFree == true) && (prods[i].nutFree == true)) {
+		if ((dairyFree == true) && (nutFree == true)) {
 			// organic restriction check
 			if (organic == true) {
-				if (prods[i].organic == true) {
-					product_names.push(prods[i]);
+				if (products[i].organic == true && (products[i].dairyFree == true) && (products[i].nutFree == true)) {
+					product_names.push(products[i]);
 				}
 			}
 			else {
-				product_names.push(prods[i]);
+				if((products[i].dairyFree == true) && (products[i].nutFree == true)){
+					product_names.push(products[i])
+				}
+				;
 			}
 		}
 		//lactose intolerant check
-		else if ((dairyFree == true) && (prods[i].dairyFree == true)) {
+		else if ((dairyFree == true) && (products[i].dairyFree == true)) {
             // organic check
             if (organic == true) {
-                if (prods[i].organic == true) {
-                    product_names.push(prods[i]);
+                if (products[i].organic == true) {
+                    product_names.push(products[i]);
                 }
             }
             else {
-                product_names.push(prods[i]);
+                product_names.push(products[i]);
             }
         }
 
 		//nut allergy check
-		else if ((nutFree == true) && (prods[i].nutFree == true)) {
+		else if ((nutFree == true) && (products[i].nutFree == true)) {
             // organic check
             if (organic == true) {
-                if (prods[i].organic == true) {
-                    product_names.push(prods[i]);
+                if (products[i].organic == true) {
+                    product_names.push(products[i]);
                 }
             }
             else {
-                product_names.push(prods[i]);
+                product_names.push(products[i]);
             }
         }		
 		//organic check filter
 		else if ((dairyFree == false) && (nutFree == false)) {
             if (organic == true) {
-                if (prods[i].organic == true) {
-                    product_names.push(prods[i]);
+                if (products[i].organic == true) {
+                    product_names.push(products[i]);
                 }
             }
             else {
-                product_names.push(prods[i]);
+                product_names.push(products[i]);
             }
         }
 		// none check
@@ -148,13 +158,13 @@ function restrictListProducts(dairyFree, prods, nutFree, organic, none) {
             // if prefer organic
             if (organic == true) {
                 // and product is organic
-				if(prods[i].organic == true){
-					product_names.push(prods[i]);
+				if(products[i].organic == true){
+					product_names.push(products[i]);
 				}
             }
             // if no organic preference
 			else{
-				product_names.push(prods[i]);
+				product_names.push(products[i]);
 			}
 		}
 
