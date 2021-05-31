@@ -96,7 +96,7 @@ function restrictListProducts(dairyFree, prods, nutFree, organic, none) {
 
 
 		//lactose intolerant + nut allergy check
-		if ((dairyFree == true) && (prods[i].dairyFree == true) && (nutFree == true) && (prods[i].nutFree == true)) {
+		if ((dairyFree == true) && (prods[i].dairyFree == false) && (nutFree == true) && (prods[i].nutFree == false)) {
 			// organic restriction check
 			if (organic == true) {
 				if (prods[i].organic == true) {
@@ -108,7 +108,7 @@ function restrictListProducts(dairyFree, prods, nutFree, organic, none) {
 			}
 		}
 		//lactose intolerant check
-		else if ((dairyFree == true) && (prods[i].dairyFree == true)) {
+		else if ((dairyFree == true) && (prods[i].dairyFree == false)) {
             // organic check
             if (organic == true) {
                 if (prods[i].organic == true) {
@@ -121,7 +121,7 @@ function restrictListProducts(dairyFree, prods, nutFree, organic, none) {
         }
 
 		//nut allergy check
-		else if ((nutFree == true) && (prods[i].nutFree == true)) {
+		else if ((nutFree == true) && (prods[i].nutFree == false)) {
             // organic check
             if (organic == true) {
                 if (prods[i].organic == true) {
@@ -133,7 +133,7 @@ function restrictListProducts(dairyFree, prods, nutFree, organic, none) {
             }
         }		
 		//organic check filter
-		else if ((dairyFree == false) && (nutFree == false)) {
+		else if ((dairyFree == true) && (nutFree == false)) {
             if (organic == true) {
                 if (prods[i].organic == true) {
                     product_names.push(prods[i]);
