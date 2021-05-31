@@ -133,7 +133,7 @@ function restrictListProducts(dairyFree, prods, nutFree, organic, none) {
             }
         }		
 		//organic check filter
-		else if ((dairyFree == true) && (nutFree == true)) {
+		else if ((dairyFree == false) && (nutFree == false)) {
             if (organic == true) {
                 if (prods[i].organic == true) {
                     product_names.push(prods[i]);
