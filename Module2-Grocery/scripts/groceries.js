@@ -81,7 +81,7 @@ var products = [
 		price: 1.75
 	}
 
-
+	
 ].sort((a,b) => b.price-a.price);
 	
 
