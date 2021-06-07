@@ -6,9 +6,27 @@ h1{
 
 }
 
+h3{
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-size: 200%;
+}
+
 body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Baloo Tammudu 2', cursive;
   background-color: #b1cad6;
+}
+
+div.tabcontent{
+
+  margin-bottom: auto;
+
+}
+
+.tablinks{
+
+  color: aliceblue;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-size: 175%;
 
 }
 
@@ -16,7 +34,7 @@ body{
 .tab {
   overflow: hidden;
   border: 1px solid rgb(119, 162, 211);
-  background-color: #066e9e;
+  background-color: #1c95ce;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -46,10 +64,23 @@ body{
   padding: 6px 12px;
   border: 1px solid rgb(181, 205, 228);
   border-top: none;
+  font-size: 150%;
 }
 
 .walmart{
   border: 5px outset rgb(34, 34, 34);
   background-color: lightblue;    
   text-align: center;
+}
+
+.block{
+  font-family: 'Baloo Tammudu 2', cursive;
+  background-color: #ffffff; 
+  border: none;
+  color: rgb(37, 110, 179);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
