@@ -8,7 +8,7 @@ var products = [
 		organic: true,
 		dairyFree: true,
 		nutFree: true,
-		price: 1.09
+		price: 1.10
 	},
 	{
 		name: "Peanut Butter",
@@ -29,7 +29,7 @@ var products = [
 		organic: true,
 		dairyFree: true,
 		nutFree: true,
-		price: 1.49
+		price: 1.50
 	},
 	{
 		name:"Almonds",
@@ -85,7 +85,7 @@ var products = [
 		organic: false,
 		dairyFree: true,
 		nutFree: true,
-		price: 5.69
+		price: 5.70
 	}
 
 	
