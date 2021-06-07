@@ -8,17 +8,28 @@ h1{
 
 h3{
   font-family: 'Baloo Tammudu 2', cursive;
-  font-size: 200%;
+  font-size: 170%;
 }
 
 body{
   font-family: 'Baloo Tammudu 2', cursive;
-  background-color: #b1cad6;
+  background-color: #ececec;
 }
 
 div.tabcontent{
 
   margin-bottom: auto;
+
+}
+
+#DorP{
+  position: relative;
+  font-family: Arial;
+}
+
+.DorP{
+  text-align: center;
+  border: 2px solid rgb(46, 46, 46)
 
 }
 
@@ -60,11 +71,13 @@ div.tabcontent{
 
 /* Style the tab content */
 .tabcontent {
+  text-align: center;
   display: none;
   padding: 12px 12px;
   border: 1px solid rgb(181, 205, 228);
   border-top: none;
   font-size: 150%;
+  border: 2px solid black
 }
 
 .walmart{
@@ -78,7 +91,7 @@ div.tabcontent{
   background-color: #ffffff; 
   border: none;
   color: rgb(37, 110, 179);
-  padding: 32px 32px;
+  padding: 16px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

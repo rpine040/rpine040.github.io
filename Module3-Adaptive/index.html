@@ -25,8 +25,8 @@
 
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
-  <p>Filter our products with your own Dietary Preferences:</p>
-  <br>
+  <h3>Filter our products with your own Dietary Preferences:</h3>
+
   <input type="checkbox" id="dairyFree" name="dairyFree" value="dairyFree"
     onchange="populateListProductChoices('dairyFree', 'displayProduct', 'nutFree', 'Organic', 'None')">
   <span class="dietSelectText">
@@ -50,6 +50,9 @@
   </span><br>
   <br>
 
+  <button id="submitButton" type="button" class="block">
+		Purchase Previous Cart
+	</button>
 
 	<!--<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
@@ -63,8 +66,9 @@
 <div id="Products" class="tabcontent">
   <h3>Products</h3>
   <p>Welcome to your custom shop!</p>
-	 Choose items to buy:
+	 Choose items add to your cart:
 	 <div id="displayProduct"></div>
+   <br>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add items to cart.
 	</button>
@@ -77,9 +81,12 @@
 </div>
 
 <div id="Date" class="tabcontent">
-  <div>
-    Would you like Delivery or Pick-up?
-    <select id="favorite">
+
+  <h3>Please choose how you would like to get your groceries:</h3>
+
+  <div class="DorP">
+    <p>Would you like Delivery or Curb Side Pick-up?</p>
+    <select id="selection">
       <option value="NavigationBar" selected="selected">Delivery</option>
       <option value="SearchBar">Pick-Up</option>
     </select><br>
@@ -87,8 +94,8 @@
 
   <br>
 
-  <div>
-  Please select a date for Pick-up or Delivery<br>
+  <div class="DorP">
+  <p>Please select a date for Pick-up or Delivery</p><br>
 	<form action="/action_page.php">
     <label for="groceryDate">Date:</label>
     <input type="date" id="groceryDate" name="groceryDate">
@@ -98,14 +105,19 @@
   
   <br>
 
-  <div>
+  <div class="DorP">
   <label for="appt">Choose a time for your Delivery/Pick-up:</label><br>
 
   <input type="time" id="appt" name="appt"
     min="08:00" max="23:00" required>
 
   <small>Walmart hours are 8am to 11pm due to Covid</small>
-  </div>
+  </div> <br>
+
+  <button id="submitButton" type="button" class="block">
+		Confirm Order
+	</button>
+
 </div>
 
 <script src="scripts/groceries.js"></script>
