@@ -141,3 +141,13 @@ i {
     height: 250px;
     object-fit: cover;
 }
+.map-container{
+    padding-bottom:40%;
+    margin-top: 10%;    
+    flex-basis: 100%;
+    width: 100%;
+    position:relative;
+    height:0;
+    display: flex;
+
+}
