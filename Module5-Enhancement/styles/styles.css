@@ -65,10 +65,10 @@ td{
     font-size: 20px;
 }
 p{
-    font-size: 18px;
+    font-size: 20px;
 }
 i {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 
@@ -122,10 +122,6 @@ i {
     color: white;
 }
 
-.welcome-txt {
-    margin: 100px;
-    text-align: center;
-}
 .form-group {
     margin-bottom: 12px;
 }
