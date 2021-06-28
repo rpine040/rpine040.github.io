@@ -1,0 +1,397 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+<!-- Images source: -->
+<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Line Awesome -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Your own additional style sheet -->
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/cupertino/jquery-ui.css" type="text/css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <title>OmniDental</title>
+</head>
+
+<body>
+<!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+<!-- It really has become a standard. -->
+<!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+<!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+<!-- be sections in your page. -->
+    <div class="container-fluid">
+
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light bg-light">
+
+                <img src="images/Logo.jpg" width="75" height=auto>
+
+                <h1>OmniDental</h1>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <h3><i class="far fa-envelope" style="color:#3194b3"></i>contact@omnidental.ca</h3>
+                        </li>
+
+                        <li class="nav-item">
+                            <h3><i class="fas fa-phone" style="color:#3194b3"></i>(613) 455-9891</h3>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a class="navbar-brand" href="#" style="margin-left: 30px; color: white">RETURN TO TOP</a>
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dentists" style="color: white">DENTAL SPECIALISTS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#availabilities" style="color: white">AVAILABILITIES</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#treatments" style="color: white">TREATMENTS</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about" style="color: white"> ABOUT US</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bookings" style="color: white"> BOOKINGS</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Just arbitrary divisions to see the link from the NavBar -->
+        <!-- Also, notice the use of the icon repeated from the menu to add grouping -->
+        <h1 style="margin-top: 3%; color:#3194b3" id="dentists"><i class="fas fa-user-md" style="margin-right: 10px; margin-right: 20px"></i>Dental Professionals</h1>
+            <br>
+            <div class="row justify-content-around">
+
+                <div class="card" style="width: 25rem; border-color: #202020;">
+                    <img src="images/davidmalcolm.jpg" class="mx-auto card-img-top crop" alt="Dr. Nolan Grayson" style="object-position: 25%; margin-top: 30px;">
+                    <div class="card-body">
+                        <h5><i class="fas fa-user-md" style="color:#3194b3; font-size: 3vw"></i></h5>
+                        <h6>Dr. Nolan Grayson <br>General Family Dentist</h6>
+                        <p class="card-text" style="margin-top: 20px;"> Dr. Grayson has is our primary dental hygienist. He has years of dental cleaning under his belt, and can refer you to 
+                            one of our more specialized dentists when a more intensive treatment is required. He will help guide you down the path towards braces, dentures, and other treatments.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 25rem; border-color: #202020;">
+                    <img src="images/alexmorrison.jpg" class="mx-auto card-img-top crop" alt="Dr. Alex Morrison" style="object-position: 25%; margin-top: 30px;">
+                    <div class="card-body">
+                        <h5><i class="fas fa-user-md" style="color:#3194b3; font-size: 3vw"></i></h5>
+                        <h6>Dr. Alex Morrison <br>Orthodontist and Periodontist</h6>
+                        <p class="card-text" style="margin-top: 20px;"> Dr. Morrison deals with braces, misaligned teeth, jaw bones, and various gum related issues such as inflammation and pain. 
+                        He has years of experience installing dental implants, and performing cosmetic skin grafting on gums, as well as planning and caring for custom oral hardware such as braces.
+                        He is always welcome to consultation, and will work hard to bring your smile back into shining condition. </p>
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 25rem; border-color: #202020;">
+                    <img src="images/jessiemclaire.jpg" class="mx-auto card-img-top crop" alt="Dr. Jessie McClaire" style="object-position: 25%; margin-top: 30px;">
+                    <div class="card-body">
+                        <h5><i class="fas fa-user-md" style="color:#3194b3; font-size: 3vw"></i></h5>
+                        <h6>Dr. Jessie McClaire <br>Prosthodontist and Endodontist</h6>
+                        <p class="card-text" style="margin-top: 20px;"> Dr. McClaire is our senior dental specialist, having worked for +20 years on replacing damaged, decayed, or missing teeth. She specializes in 
+                        anything related to the inside of the tooth, and works diligently to care for any problem teeth until your bite is correct and proper.</p>
+                    </div>
+                </div>
+
+                
+                <div style="padding: 60px">
+                    <h2 id="availabilities" style="margin-top: 5%; color:#535353">Availabilities</h2>
+
+                    <table class="table" >
+                        <thead>
+                        <tr>
+                            <th scope="col">Dental Specialist</th>
+                            <th scope="col">Cleaning and Check Up</th>
+                            <th scope="col">Cavity Filling</th>
+                            <th scope="col">Braces Consultation</th>
+                            <th scope="col">Denture Consultation</th>
+                            <th scope="col">Root Canal</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Dr. Nolan Grayson</th>
+                            <td>Mon-Fri</td>
+                            <td>Wed-Sat</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Dr. Alex Morrison</th>
+                            <td>Tues-Fri</td>
+                            <td>Mon-Thurs</td>
+                            <td>Mon-Sat</td>
+                            <td>Mon-Sat</td>
+                            <td>Mon-Sat</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">Dr. Jessie McClaire</th>
+                            <td></td>
+                            <td>Tues-Fri</td>
+                            <td>Mon-Sat</td>
+                            <td>Mon-Sat</td>
+                            <td>Mon-Sat</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        <div><h1 id="treatments" style="margin-top: 5%; color:#3194b3" ><i class="fas fa-file-medical" style="margin-right: 20px"></i>Available Treatments</h1></div>
+
+
+        <div class="accordion" id="accordion">
+            <p>Our facilities are supplied with the proper equipment and specialists to ensure your teeth shine bright</p>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="collapsed accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Cleaning and Check Up - $200.00
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        
+                        <img src="images/checkup.jpg" alt="Check Up"style="display: block; margin: 0 auto; width: 55%">
+                        <p>Our dental specialists provide a full examination of your teeth, including plaque cleaning, and a fluoride treatment. Any concerns, such as 
+                            cavities, can subsequently be booked at our front desk.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="collapsed accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Cavity Filling - $125.00 per filling
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        
+                        <img src="images/cavityfilling.jpg" alt="Cavity Filling" style="display:block; margin:0 auto; width: 55%">
+                        <p>Cavities are drilled and cleaned until the cavity is removed completely. The problem area is then filled with a 
+                            tooth-colored resin, and corrected to ensure no change in biting pattern is developed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button 
+                    class="collapsed accordion-button" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" 
+                    aria-expanded="false" 
+                    aria-controls="collapseThree">
+                        Braces Consultation - Free ($1,000.00 for basic braces treatment)
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <img src="images/braces.jpg" alt="Braces" style="display:block; margin: 0 auto; width: 30%">
+                        <br>
+                        <p>One of our certified Orthodontists examines any bite problems, and will then suggest a braces treatment if necessary. Should the Orthodontist
+                            suggest braces, our plans currently start at $1,000.00. More intensive braces treatment may be subject to increased costs after consultation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button 
+                    class="collapsed accordion-button" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" 
+                    aria-expanded="false" 
+                    aria-controls="collapseFour">
+                        Denture Consultation - Free ($1,350 for basic denture plan)
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <img src="images/dentures.jpg" alt="Dentures" style="display:block; margin: 0 auto; width: 30%">
+                        <br>
+                        <p>One of our certified dental specialists will examine any problems caused by loss of teeth. Should the Orthodontist suggest 
+                            dentures, our plans currently start at $1,350. More intensive denture treatments may be subject to increased costs after consulation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="collapsed accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Root Canal - $625.00 per root canal
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#accordion">
+                    <div class="accordion-body">
+            
+                        <img src="images/rootcanal.jpg" alt="Root Canal" style="display:block; margin: 0 auto; width: 30%">
+                        <br>
+                        <p>Our certified specialist will remove the infected inner pulp of the tooth and nerve within the root of the affected tooth. They will then clean
+                            and shape the inside of the root canal, before filling and sealing the space. A crown will then be placed on the tooth in order to protect, and
+                            restore it to its original function.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="">
+            <h1 style="margin-top: 5%; color:#3194b3" id="about">Visit Us In-Person</h1>
+            <br>
+            <h5 style="color: #3194b3"><i class="fas fa-map-marker-alt"></i>Location</h5>
+            <p id="services" style="color: black">
+                Ottawa, ON<br>
+                1112 Prince Albert Drive<br>
+                K3M 6G2
+            </p>
+            <h5 style="color: #3194b3"><i class="far fa-clock"></i>Weekly Hours</h5>
+            <p style="color: black">Monday-Friday 11:00 - 20:00 <br> Saturday 09:00 - 16:00</p>
+            <b><p style="color: black">Closed during Sundays and Holidays</p></b>
+        </div> 
+        <br>
+
+        <!-- This section contains elements to be validated -->
+        <!-- Refer to the JavaScript file, where JQuery is used to listen to those inputs using the ids -->
+        <div style="margin-top:5%" id="bookings">
+            <h1 style="margin-bottom: 30px; color:#3194b3"><i class="far fa-calendar-check" style="margin-right: 20px"></i>Make an appointment</h1>
+            <h5>Please provide your contact information:</h5>
+            <div class="form-group">
+                <input type="name" class="form-control" id="nameInput" placeholder="Enter Full Name">
+            </div>
+            <div class="form-group">
+                <input type="phone" id="phone" class="form-control" placeholder="Please Enter Your Phone Number (EX: 613-999-444)">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="emailInput" placeholder="Please Enter Your Email (EX. JohnSmith@gmail.com)">
+            </div>
+            <br>
+
+            <h5>Please select your appointment details:</h5>
+            <div class="form-group">
+                <select class="form-control" id="serviceSelect">
+                    <option disabled selected>Select Service</option>
+                    <option>Cleaning and Check Up</option>
+                    <option>Cavity Filling</option>
+                    <option>Braces Consultation</option>
+                    <option>Denture Consultation</option>
+                    <option>Root Canal </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="dentistSelect" onchange="setDoctor()">
+                    <option disabled selected>Select Dental Professional</option>
+                    <option value="Dr. Nolan Grayson">Dr. Nolan Grayson</option>
+                    <option value="Dr. Alex Morrison">Dr. Alex Morrison</option>
+                    <option value="Dr. Jessie McClaire">Dr. Jessie McClaire</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p><input type="text" id="appointmentDate" class="form-control" placeholder="Preferred Date of Appointment"></p>
+                <p><strong>Our office is closed from July 18 to July 24. We apologize for any inconvenience this may cause.</strong></p>
+            </div>
+        </div>
+        <br>
+            <h5>Please provide your credit card information:</h5>
+            <p><i class="fas fa-credit-card"></i><input type="text" id="credit" placeholder="XXXX XXXX XXXX XXXX" onchange="setDate()" 
+                title="If you are not able to make your appointment, please let us know at least 3 days before your scheduled date. Otherwise, 
+                a $25.00 fee will be charged to your account" style="width:20%"></p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" style="width:15%; margin-left: 3%" data-bs-target="#exampleModal" onclick="displayBooking(); displayDentist()">
+            BOOK YOUR APPOINTMENT NOW
+        </button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Appointment Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Your Appointment Information</h6> <br>
+                    Your doctor is: <br>
+                    <p id ="displayDentist">Please Select a Doctor.</p> <br>
+                    Your appointment time is: <br>
+                    <p id="displayBooking">Please select a valid appointment date.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript helper for appointment booking modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"crossorigin="anonymous"></script>
+
+</body>
+<footer style="text-align: right; margin: 20px;">Website designed by Mark Grayson</footer>
+</html>
